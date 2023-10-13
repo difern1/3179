@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/difern1/FIT3179/main/emissions.csv"
+  },
+  "transform": [
+    {"filter": {"field": "region", "valid": false}
+  },
+    {"filter":"datum.Total > 1"
+    } 
+
+  ], 
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["region"],
+      "bind": "legend"
+  } 
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "GDP",
+      "scale": {"type": "log", "base":2, "zero":false},
+      "type": "quantitative",
+      "title": "GDP"
+    },
+    "y": {
+      "field": "Total",
+      "type": "quantitative",
+      "title": "Total Emissions",
+      "scale": {"type": "log", "base":2, "zero":false}
+    },
+    "size": {
+      "field": "Population",
+      "type": "quantitative",
+      "title": "Population Size"
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region"
+    },
+    "opacity": {
+      "condition": {"selection": "continent_highlight", "value": 0.6},
+      "value": 0.1
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "region", "type": "nominal", "title": "Region"},
+      {"field": "GDP", "type": "quantitative","title": "GDP" },
+      {"field": "Total", "type": "quantitative", "title": "Total Emissions"},
+      {"field": "Population", "type": "quantitative", "title": "Population"}
+    ]
+  },
+  "title": "GDP vs Total Emissions in kT"
+}

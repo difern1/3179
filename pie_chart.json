@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Type of Global CO2 Emissions" },
+    "data": {
+      "url": "https://raw.githubusercontent.com/difern1/FIT3179/main/emissions.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.Country === 'Global'"
+      },
+      {
+        "fold": ["Coal", "Gas", "Oil", "Cement", "Flaring", "Other"],
+        "as": ["Emission Type", "Value"]
+      }
+    ],
+    "width": 300,
+    "height": 300,
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 80},
+        "encoding": {
+          "theta": {
+            "field": "Value",
+            "type": "quantitative",
+            "stack": true
+          },
+          "color": {
+            "field": "Emission Type",
+            "type": "nominal",
+            "legend": {"title": "Emission Type"}
+          },
+          "tooltip": [
+            {"field": "Emission Type", "type": "nominal", "title": "Emission Type"},
+            {"field": "Value", "type": "quantitative", "title": "Emission Amount"}
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "aggregate": [{"op": "sum", "field": "Value", "as": "TotalEmissions"}]
+          },
+          {
+            "calculate": "'Total: ' + format(datum.TotalEmissions, '.2f')",
+            "as": "FormattedTotal"
+          }
+        ],
+        "mark": {"type": "text", "align": "center", "baseline": "middle", "fontSize": 16},
+        "encoding": {
+          "text": {"field": "FormattedTotal", "type": "nominal"}
+        }
+      }
+    ],
+    "view": {"stroke": null}
+  }
+  
