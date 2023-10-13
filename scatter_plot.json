@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": { "text": "Per Capita Emissions vs Life Expectancy" },
-    "data": {"url": "https://raw.githubusercontent.com/difern1/FIT3179/main/emissions.csv"},
+    "data": {"url": "https://github.com/difern1/3179/blob/d3581515492517fb653bfa22373f6306abae566d/emissions.csv"},
     "mark": "point",
     "transform": [
         {
