@@ -2,46 +2,40 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": { "text": "Per Capita Emissions vs Life Expectancy" },
     "data": {"url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"},
-    "mark": "point",
+    "mark": "circle",
     "transform": [
         {
-            "filter": "datum['Life expectancy'] > 30 " 
-        }
-    ],
-
-    "encoding": {
-      "x": {
-        "field": "Per Capita",
-        "scale": {"type": "log", "base":2, "zero":false},
-        "type": "quantitative"},
-    "opacity": {
-        "condition": {
-            "test": "test(regexp(search_input,'i'),datum.Country)",
-            "value": 1
+            "filter":"datum['Per Capita'] > 2.5"
         },
-        "value": 0.07
-    },
+        {
+            "filter":"datum['Population: Labor force participation (%)']>0"
+        },
+        {
+          "calculate": "datum['Population: Labor force participation (%)'] * 100",
+          "as": "Labor force participation (%)"
+        }
+
+    ],
+    "encoding": {
+    "x": {
+        "field": "Per Capita",
+        "type": "quantitative",
+        "title":" Per Capita Emissions"},
+    "y": {
+        "field": "Labor force participation (%)", 
+        "type": "quantitative",
+        "title":" Labor force participation (%)"},
     "tooltip": [
         {"field":"Country","type":"nominal", "title":"Country"},
         {"field":"Per Capita","type":"nominal", "title":"Per Capita Emissions"},
-        {"field":"Life expectancy","type":"quantitative", "title":"Life Expectancy"}],
-    "y": {
-        "field": "Life expectancy", 
-        "scale":{"domain": [50,90]},
-        "type": "quantitative"}
-    },
-    "params":[
-    {
-    "name": "search_input",
-    "bind": {
-        "input": "search",
-        "placeholder": "Country",
-        "name": "Search: "
-    },
-    "value": ""
+        {"field": "Labor force participation (%)","type":"quantitative", "title":"Labor force participation (%)"}]
+    
     }
-    ]
-}
+    
+    }
+
+
+
 
     
 

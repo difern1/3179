@@ -39,6 +39,7 @@
         "field": "EmissionType",
         "type": "nominal",
         "legend": {"title": "Emission Type"}
+        
       },
       "tooltip": [
         {"field":"Country","type":"nominal", "title":"Country"},
