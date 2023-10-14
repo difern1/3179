@@ -22,7 +22,7 @@
                     "lookup": "properties.NAME",
                     "from": {
                         "data": {
-                            "url": "https://github.com/difern1/3179/blob/d3581515492517fb653bfa22373f6306abae566d/emissions.csv"
+                            "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
                         },
                         "key": "Country",
                         "fields": ["Per Capita"]
