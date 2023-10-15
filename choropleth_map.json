@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
     "height": 400,
-    "background": "lightblue",
+    "background": "skyblue",
     "params": [
         {
             "name": "zoom_level",

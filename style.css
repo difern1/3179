@@ -45,14 +45,14 @@ h2 {
 
 #para2 {
     font-family: 'Merriweather', serif;
-    color: white;  /* Set the font color to light blue */
-    width: 97%;        /* Full width */
+    color: white;  
+    width: 97%;       
     border: 7px solid #42B6E5;
     padding: 30px 20px;
-    box-sizing: border-box;  /* Include padding and border in the element's total width */
-    text-align: center;      /* Center the text inside the box */
+    box-sizing: border-box;  
+    text-align: center;      
     background-color: #42B6E5;
-    margin: 20px 0;          /* Only top and bottom margin */
+    margin: 20px 0;         
     border-radius: 15px;
     font-size: 35px
     
@@ -60,13 +60,13 @@ h2 {
 
 .map-container {
     display: flex;
-    justify-content: space-between; /* Optional: Adds space between the map and the paragraph */
+    justify-content: space-between; 
     border: 7px solid lightblue;
     padding: 30px 20px;
-    box-sizing: border-box;  /* Include padding and border in the element's total width */
-    text-align: center;      /* Center the text inside the box */
+    box-sizing: border-box;  
+    text-align: center;     
     background-color: lightblue;
-    margin: 20px 0;          /* Only top and bottom margin */
+    margin: 20px 0;       
     border-radius: 15px;
     font-size: 30px;
     width:97%
@@ -74,6 +74,7 @@ h2 {
 
 #choropleth_map {
     width: 40%; /* Adjust as needed */
+
 
 }
 
