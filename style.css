@@ -6,6 +6,7 @@ html, body {
     display: flex;     /* Flexbox layout */
     flex-direction: column; /* Stack children vertically */
     align-items: center;   /* Center children horizontally */
+    background-color: white
     
 }
 
@@ -36,7 +37,7 @@ h2 {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 15px;
-    width: 94%;
+    width: 93%;
     margin: 5px 20px 20px 20px;
     text-align: left;
     font-size: 25px;
@@ -45,7 +46,7 @@ h2 {
 #para2 {
     font-family: 'Merriweather', serif;
     color: white;  /* Set the font color to light blue */
-    width: 98%;        /* Full width */
+    width: 97%;        /* Full width */
     border: 7px solid #42B6E5;
     padding: 30px 20px;
     box-sizing: border-box;  /* Include padding and border in the element's total width */
@@ -53,18 +54,27 @@ h2 {
     background-color: #42B6E5;
     margin: 20px 0;          /* Only top and bottom margin */
     border-radius: 15px;
-    font-size: 30px
+    font-size: 35px
     
 }
 
 .map-container {
     display: flex;
     justify-content: space-between; /* Optional: Adds space between the map and the paragraph */
+    border: 7px solid lightblue;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: lightblue;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px;
+    width:97%
 }
 
 #choropleth_map {
     width: 40%; /* Adjust as needed */
-    /* Other styles for the map */
+
 }
 
 #para3 {
@@ -73,7 +83,7 @@ h2 {
     background-color: #f5f5f5;
     padding: 20px;
     border-radius: 15px;
-    width: 25%;
+    width: 23%;
     margin: 20px 20px 20px 20px;
     text-align: left;
     font-size: 20px;
@@ -89,7 +99,7 @@ h2 {
     background-color: #42B6E5;
     margin: 20px 0;          /* Only top and bottom margin */
     border-radius: 15px;
-    font-size: 30px
+    font-size: 35px
     
 }
 
@@ -104,7 +114,7 @@ h2 {
     background-color: #42B6E5;
     margin: 20px 0;          /* Only top and bottom margin */
     border-radius: 15px;
-    font-size: 30px
+    font-size: 35px
     
 }
 
@@ -113,6 +123,15 @@ h2 {
     display: flex;
     align-items: center; /* Vertically aligns the charts in the center */
     margin-bottom: 20px; /* Space between top charts and the centered chart below */
+    border: 7px solid lightblue;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: lightblue;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px;
+    width: 97%
 }
 
 #bar_chart {
@@ -130,15 +149,34 @@ h2 {
 .centered-chart {
     display: flex;
     justify-content: center; /* Center the chart horizontally */
-    width: 100%; /* Ensure it takes full width */
+    width: 97%; /* Ensure it takes full width */
     box-sizing: border-box; /* Include padding in width calculation */
     padding: 0 50px; /* Adjust the padding to align with the top charts */
+    border: 7px solid lightblue;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: lightblue;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px
 }
 
 .bottom-charts-container {
     display: flex;
     justify-content: space-between; /* Adjusts space between the elements */
     align-items: center; /* Vertically aligns the elements in the center */
+    box-sizing: border-box; /* Include padding in width calculation */
+    padding: 0 50px; /* Adjust the padding to align with the top charts */
+    border: 7px solid lightblue;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: lightblue;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px;
+    width:97%
 }
 
 #bubbleplot, #scatterplot {
@@ -157,6 +195,36 @@ h2 {
     padding: 20px;
     border-radius: 15px;
     width: 25%;
+    margin: 20px 20px 20px 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+#para7 {
+    flex: 1; /* Allow the paragraph to take equal space */
+    text-align: center; /* Center the text within the paragraph */
+    margin: 0 10px; /* Optional: Add some margin between elements */
+    font-family: 'PT Sans', sans-serif;
+    border: 7px solid #f5f5f5;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 93%;
+    margin: 20px 20px 20px 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+#para8 {
+    flex: 1; /* Allow the paragraph to take equal space */
+    text-align: center; /* Center the text within the paragraph */
+    margin: 0 10px; /* Optional: Add some margin between elements */
+    font-family: 'PT Sans', sans-serif;
+    border: 7px solid #f5f5f5;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 95%;
     margin: 20px 20px 20px 20px;
     text-align: left;
     font-size: 15px;

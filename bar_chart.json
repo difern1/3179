@@ -6,6 +6,7 @@
     "data": {
         "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
     },
+    "background": "lightblue",
     "transform": [
         {
             "filter": "datum.Total > 0" 

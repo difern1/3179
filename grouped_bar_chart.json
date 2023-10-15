@@ -3,9 +3,11 @@
     "title": { "text": "Emissions Amounts by Type of Top 5 Countries" },
     "width": 200,
     "height": 200,
+    
     "data": {
       "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
     },
+    "background": "lightblue",
     "transform": [
       {
         "calculate": "toNumber(datum.Total)",

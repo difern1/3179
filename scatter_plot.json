@@ -5,6 +5,7 @@
     "height": 300,
     "data": {"url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"},
     "mark": "circle",
+    "background": "lightblue",
     "transform": [
         {
             "filter":"datum['Per Capita'] > 2.5"
