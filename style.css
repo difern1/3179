@@ -1,6 +1,5 @@
-/* Set the size of the entire page */
 html, body {
-    width: 90%;       /* Full width */
+    width: 100%;       /* Full width */
     height: 100%;      /* Full height */
     margin: 0;         /* No margin */
     padding: 0;        /* No padding */
@@ -13,7 +12,7 @@ html, body {
 h1 {
     font-family: 'Merriweather', serif;
     color: #42B6E5;  /* Set the font color to light blue */
-    width: 97%;        /* Full width */
+    width: 100%;        /* Full width */
     border: 7px solid #42B6E5;
     padding: 30px 20px;
     box-sizing: border-box;  /* Include padding and border in the element's total width */
@@ -23,12 +22,107 @@ h1 {
     border-radius: 15px;
 }
 
-p {
-    font-family: 'Merriweather', serif; /* Optional: To match the font of h1 */
-    background-color: #f5f5f5; /* Light gray background color for the box */
-    padding: 20px; /* Space inside the box around the text */
-    border-radius: 15px; /* Rounded corners */
-    width: 50%; /* Width of the box, adjust as needed */
-    margin: 20px auto 20px 20px; /* Top, Right, Bottom, Left margins */
-    text-align: left; /* Left-align the text inside the box */
+h2 {
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    font-size: 16px;
+    }
+
+#para1 {
+    font-family: 'PT Sans', sans-serif;
+    border: 7px solid #f5f5f5;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 97%;
+    margin: 5px 20px 20px 20px;
+    text-align: left;
+    font-size: 25px;
+}
+
+#para2 {
+    font-family: 'Merriweather', serif;
+    color: #42B6E5;  /* Set the font color to light blue */
+    width: 100%;        /* Full width */
+    border: 5px solid #42B6E5;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: white;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px
+}
+
+.map-container {
+    display: flex;
+    justify-content: space-between; /* Optional: Adds space between the map and the paragraph */
+}
+
+#choropleth_map {
+    width: 40%; /* Adjust as needed */
+    /* Other styles for the map */
+}
+
+#para3 {
+    font-family: 'PT Sans', sans-serif;
+    border: 7px solid #f5f5f5;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 25%;
+    margin: 5px 20px 20px 20px;
+    text-align: left;
+    font-size: 20px;
+}
+#para4 {
+    font-family: 'Merriweather', serif;
+    color: #42B6E5;  /* Set the font color to light blue */
+    width: 100%;        /* Full width */
+    border: 5px solid #42B6E5;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: white;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px
+}
+
+#para5 {
+    font-family: 'Merriweather', serif;
+    color: #42B6E5;  /* Set the font color to light blue */
+    width: 100%;        /* Full width */
+    border: 5px solid #42B6E5;
+    padding: 30px 20px;
+    box-sizing: border-box;  /* Include padding and border in the element's total width */
+    text-align: center;      /* Center the text inside the box */
+    background-color: white;
+    margin: 20px 0;          /* Only top and bottom margin */
+    border-radius: 15px;
+    font-size: 30px
+}
+
+
+.top-charts-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the charts */
+    align-items: center; /* Vertically aligns the charts in the center */
+    margin-bottom: 20px; /* Space between top charts and the centered chart below */
+}
+
+#bar_chart, #piechart {
+    flex: 1; /* Allow each chart to take equal space */
+    margin: 0 10px; /* Optional: Add some margin between charts */
+    /* Other styles for the charts */
+}
+
+.centered-chart {
+    display: flex;
+    justify-content: center; /* Center the chart horizontally */
+}
+
+#groupedbar {
+    /* Styles for the grouped bar chart */
+    /* Set width or max-width if needed */
 }

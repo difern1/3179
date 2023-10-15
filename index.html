@@ -11,24 +11,52 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=PT+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
-
 
 
 <title>Map</title> 
 </head>
 <body>
     <h1>An Insight Into Global Emissions</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Proin et placerat elit. Vestibulum et rhoncus eros. Duis congue nisi maximus augue aliquam luctus.
-        Proin a mi sodales, fermentum purus id, pretium massa.<p>
-    <div id="choropleth_map"> </div>
-    <div id="bar_chart"></div>  
-    <div id="bubbleplot"></div>
-    <div id="groupedbar"></div>   
+    <h2>By Dinal Fernando 32511051</h2>
+    <p id="para1"> This visualisation explores the CO2 emissions of countries and regions in order to analyse the relative 
+        largest producers of CO2 emissions as well as connections between CO2 producers and measures such as quality of life and prosperity. 
+        In doing so, this visualisation allows for an understanding as to the forms of emissions produced, and the necessity of CO2 emissions 
+        for a nations prosperity which will potentially allow for a reduction in CO2 emissions globally. </p>
+    
+        <p id="para2"> The Global Per Capita Emissions </p>
+
+    <div class="map-container"> <!-- Flex container -->
+        <div id="choropleth_map"></div>
+        <p id="para3">This choropleth map shows the Per capita emissions of countries. 
+            Use the dropdown menu to centre the map on various regions, and use the zoom to further interact with the map. 
+            As shown, Qatar has the highest per capita emissions with a population of 2.688 million. Further, there is a far lower concentration of higher producing countries in Africa. In the 
+            Americas, Canada and North America also feature relatively higher per capita emissions.
+            </p>
+    </div>
+
+    <p id="para4"> How Emissions are Produced </p>
+    
+
+
+<div class="top-charts-container"> <!-- Flex container for top charts -->
+    <div id="bar_chart"></div>
     <div id="piechart"></div>
-    <div id="scatterplot"></div>    
+</div>
+
+<div class="centered-chart">
+    <div id="groupedbar"></div>
+</div>
+
+<!-- ... (rest of your code) -->
+
+
+<div class="chart-container2">
+    <div id="bubbleplot"></div>
+    <div id="scatter_plot"></div>
+</div>  
+<p id="para5"> How Emissions Effect Lives</p> 
 </body>
 </html>
