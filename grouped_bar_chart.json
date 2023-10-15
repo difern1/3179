@@ -1,60 +1,59 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Emissions Amounts by Type of Top 5 Countries" },
-    "width": 200,
-    "height": 200,
-    
-    "data": {
-      "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Emissions Amounts by Type of Top 5 Countries" },
+  "width": 200,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
+  },
+  "background": "lightblue",
+  "transform": [
+    {
+      "calculate": "toNumber(datum.Total)",
+      "as": "Total C02 Emissions(kT)"
     },
-    "background": "lightblue",
-    "transform": [
-      {
-        "calculate": "toNumber(datum.Total)",
-        "as": "Total C02 Emissions(kT)"
-      },
-      {
-        "sort": [{ "field": "Total C02 Emissions(kT)", "order": "descending" }],
-        "window": [{"op": "row_number", "as": "rank"}],
-        "frame": [null, null]
-      },
-      {
-        "filter": "datum.rank > 1 && datum.rank < 7"
-      },
-      {
-        "fold": ["Coal", "Gas", "Oil"],
-        "as": ["EmissionType", "Value"]
-      }
-    ],
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "EmissionType",
-        "type": "nominal",
-        "axis": {"title": "Emission Type"}
-      },
-
-      "y": {
-        "field": "Value",
-        "type": "quantitative",
-        "axis": {"title": "Emission Amount"}
-      },
-      "color": {
-        "field": "EmissionType",
-        "type": "nominal",
-        "legend": {"title": "Emission Type"}
-        
-      },
-      "tooltip": [
-        {"field":"Country","type":"nominal", "title":"Country"},
-        {"field":"EmissionType","type":"nominal", "title":"Emission Type"},
-        {"field":"Value","type":"quantitative", "title":"Amount in kT"}
-      ],
-      "column": {
-        "field": "Country",
-        "type": "nominal"
-      }
+    {
+      "sort": [{ "field": "Total C02 Emissions(kT)", "order": "descending" }],
+      "window": [{"op": "row_number", "as": "rank"}],
+      "frame": [null, null]
+    },
+    {
+      "filter": "datum.rank > 1 && datum.rank < 7"
+    },
+    {
+      "fold": ["Coal", "Gas", "Oil"],
+      "as": ["EmissionType", "Value"]
     }
-    
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "EmissionType",
+      "type": "nominal",
+      "axis": {"title": "Emission Type"}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "axis": {"title": "Emission Amount"}
+    },
+    "color": {
+      "field": "EmissionType",
+      "type": "nominal",
+      "legend": {"title": "Emission Type"},
+      "scale": {
+        "domain": ["Coal", "Gas", "Oil", "Cement", "Flaring", "Other"],
+        "range": ["#e34a33", "#3182bd", "#31a354", "#9575b2", "#fdae6b", "#e6f5d0"]
+      }
+    },
+    "tooltip": [
+      {"field":"Country","type":"nominal", "title":"Country"},
+      {"field":"EmissionType","type":"nominal", "title":"Emission Type"},
+      {"field":"Value","type":"quantitative", "title":"Amount in kT"}
+    ],
+    "column": {
+      "field": "Country",
+      "type": "nominal"
+    }
   }
-  
+}
