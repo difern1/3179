@@ -13,8 +13,11 @@
                 "max": 800,
                 "step": 10,
                 "name": "Zoom: "
+                
             }
         },
+    
+    
         {
             "name": "center_to",
             "value": [0, 0],
