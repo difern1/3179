@@ -3,6 +3,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"
   },
+  "width": 300,
+  "height": 300,
   "transform": [
     {"filter": {"field": "region", "valid": false}
   },

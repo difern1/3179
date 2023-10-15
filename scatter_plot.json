@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Per Capita Emissions vs Life Expectancy" },
+    "title": { "text": "Per Capita Emissions vs Labour Force Participation" },
+    "width": 300,
+    "height": 300,
     "data": {"url": "https://raw.githubusercontent.com/difern1/3179/main/emissions.csv"},
     "mark": "circle",
     "transform": [
